@@ -22,13 +22,13 @@ public:
     double getTempC() const;
 
     // Setters
-    void setFips(int f);
-    void setYear(int y);
-    void setTemp(double t);
-    void setTempC(double tc);
+    void StateClimate::setFips(int f) { fips = f; }
+    void StateClimate::setYear(int y) { year = y; }
+    void StateClimate::setTemp(double t) { temp = t; }
+    void StateClimate::setTempC(double tc) { tempc = tc; }
 
     // Display function
-    void display() const;
-};
-
-#endif // STATECLIMATE_H
+    void StateClimate::display() const {
+        std::cout << "FIPS: " << fips << ", Year: " << year
+                  << ", Temp (F): " << temp << ", Temp (C): " << tempc << std::endl;
+}
